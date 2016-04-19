@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.work.mapper.TbBuildingDao">
+  <insert id="insert" parameterType="com.work.bean.TbBuilding">
+   insert into tb_building(id,region,name,address,code,building_area,total_area,green_rate,residences,open_date,sale_date,finish_date,license_account,qualification_license,legal_person,legal_person_phone,legal_person_postcode,intro,remark) values(#{id},#{region},#{name},#{address},#{code},#{building_area},#{total_area},#{green_rate},#{residences},#{open_date},#{sale_date},#{finish_date},#{license_account},#{qualification_license},#{legal_person},#{legal_person_phone},#{legal_person_postcode},#{intro},#{remark});
+  </insert>
+  <delete id="delete" parameterType="com.work.bean.TbBuilding">
+   delete from tb_building
+   <where>
+    id=#{id}
+         <if test="region!=null">and region=#{ region }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="code!=null">and code=#{ code }</if>
+         <if test="building_area!=null">and building_area=#{ building_area }</if>
+         <if test="total_area!=null">and total_area=#{ total_area }</if>
+         <if test="green_rate!=null">and green_rate=#{ green_rate }</if>
+         <if test="residences!=null">and residences=#{ residences }</if>
+         <if test="open_date!=null">and open_date=#{ open_date }</if>
+         <if test="sale_date!=null">and sale_date=#{ sale_date }</if>
+         <if test="finish_date!=null">and finish_date=#{ finish_date }</if>
+         <if test="license_account!=null">and license_account=#{ license_account }</if>
+         <if test="qualification_license!=null">and qualification_license=#{ qualification_license }</if>
+         <if test="legal_person!=null">and legal_person=#{ legal_person }</if>
+         <if test="legal_person_phone!=null">and legal_person_phone=#{ legal_person_phone }</if>
+         <if test="legal_person_postcode!=null">and legal_person_postcode=#{ legal_person_postcode }</if>
+         <if test="intro!=null">and intro=#{ intro }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </delete>
+  <update id="update" parameterType="com.work.bean.TbBuilding">
+   update tb_building
+   <set>
+         <if test="id!=null">id=#{ id },</if>
+         <if test="region!=null">region=#{ region },</if>
+         <if test="name!=null">name=#{ name },</if>
+         <if test="address!=null">address=#{ address },</if>
+         <if test="code!=null">code=#{ code },</if>
+         <if test="building_area!=null">building_area=#{ building_area },</if>
+         <if test="total_area!=null">total_area=#{ total_area },</if>
+         <if test="green_rate!=null">green_rate=#{ green_rate },</if>
+         <if test="residences!=null">residences=#{ residences },</if>
+         <if test="open_date!=null">open_date=#{ open_date },</if>
+         <if test="sale_date!=null">sale_date=#{ sale_date },</if>
+         <if test="finish_date!=null">finish_date=#{ finish_date },</if>
+         <if test="license_account!=null">license_account=#{ license_account },</if>
+         <if test="qualification_license!=null">qualification_license=#{ qualification_license },</if>
+         <if test="legal_person!=null">legal_person=#{ legal_person },</if>
+         <if test="legal_person_phone!=null">legal_person_phone=#{ legal_person_phone },</if>
+         <if test="legal_person_postcode!=null">legal_person_postcode=#{ legal_person_postcode },</if>
+         <if test="intro!=null">intro=#{ intro },</if>
+         <if test="remark!=null">remark=#{ remark },</if>
+       </set>
+   <where>
+    id=#{id}
+         <if test="region!=null">and region=#{ region }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="code!=null">and code=#{ code }</if>
+         <if test="building_area!=null">and building_area=#{ building_area }</if>
+         <if test="total_area!=null">and total_area=#{ total_area }</if>
+         <if test="green_rate!=null">and green_rate=#{ green_rate }</if>
+         <if test="residences!=null">and residences=#{ residences }</if>
+         <if test="open_date!=null">and open_date=#{ open_date }</if>
+         <if test="sale_date!=null">and sale_date=#{ sale_date }</if>
+         <if test="finish_date!=null">and finish_date=#{ finish_date }</if>
+         <if test="license_account!=null">and license_account=#{ license_account }</if>
+         <if test="qualification_license!=null">and qualification_license=#{ qualification_license }</if>
+         <if test="legal_person!=null">and legal_person=#{ legal_person }</if>
+         <if test="legal_person_phone!=null">and legal_person_phone=#{ legal_person_phone }</if>
+         <if test="legal_person_postcode!=null">and legal_person_postcode=#{ legal_person_postcode }</if>
+         <if test="intro!=null">and intro=#{ intro }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </update>
+  <select id="list" resultType="com.work.bean.TbBuilding" parameterType="com.work.bean.TbBuilding">
+   select id,region,name,address,code,building_area,total_area,green_rate,residences,open_date,sale_date,finish_date,license_account,qualification_license,legal_person,legal_person_phone,legal_person_postcode,intro,remark from tb_building
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="region!=null">and region=#{ region }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="code!=null">and code=#{ code }</if>
+         <if test="building_area!=null">and building_area=#{ building_area }</if>
+         <if test="total_area!=null">and total_area=#{ total_area }</if>
+         <if test="green_rate!=null">and green_rate=#{ green_rate }</if>
+         <if test="residences!=null">and residences=#{ residences }</if>
+         <if test="open_date!=null">and open_date=#{ open_date }</if>
+         <if test="sale_date!=null">and sale_date=#{ sale_date }</if>
+         <if test="finish_date!=null">and finish_date=#{ finish_date }</if>
+         <if test="license_account!=null">and license_account=#{ license_account }</if>
+         <if test="qualification_license!=null">and qualification_license=#{ qualification_license }</if>
+         <if test="legal_person!=null">and legal_person=#{ legal_person }</if>
+         <if test="legal_person_phone!=null">and legal_person_phone=#{ legal_person_phone }</if>
+         <if test="legal_person_postcode!=null">and legal_person_postcode=#{ legal_person_postcode }</if>
+         <if test="intro!=null">and intro=#{ intro }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </select>
+  <select id="listByPage" resultType="com.work.bean.TbBuilding" parameterType="com.work.bean.TbBuilding">
+   select id,region,name,address,code,building_area,total_area,green_rate,residences,open_date,sale_date,finish_date,license_account,qualification_license,legal_person,legal_person_phone,legal_person_postcode,intro,remark from tb_building
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="region!=null">and region=#{ region }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="code!=null">and code=#{ code }</if>
+         <if test="building_area!=null">and building_area=#{ building_area }</if>
+         <if test="total_area!=null">and total_area=#{ total_area }</if>
+         <if test="green_rate!=null">and green_rate=#{ green_rate }</if>
+         <if test="residences!=null">and residences=#{ residences }</if>
+         <if test="open_date!=null">and open_date=#{ open_date }</if>
+         <if test="sale_date!=null">and sale_date=#{ sale_date }</if>
+         <if test="finish_date!=null">and finish_date=#{ finish_date }</if>
+         <if test="license_account!=null">and license_account=#{ license_account }</if>
+         <if test="qualification_license!=null">and qualification_license=#{ qualification_license }</if>
+         <if test="legal_person!=null">and legal_person=#{ legal_person }</if>
+         <if test="legal_person_phone!=null">and legal_person_phone=#{ legal_person_phone }</if>
+         <if test="legal_person_postcode!=null">and legal_person_postcode=#{ legal_person_postcode }</if>
+         <if test="intro!=null">and intro=#{ intro }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+   limit #{offset},#{rows}
+  </select>
+  <select id="load" resultType="com.work.bean.TbBuilding" parameterType="com.work.bean.TbBuilding">
+   select id,region,name,address,code,building_area,total_area,green_rate,residences,open_date,sale_date,finish_date,license_account,qualification_license,legal_person,legal_person_phone,legal_person_postcode,intro,remark from tb_building
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="region!=null">and region=#{ region }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="code!=null">and code=#{ code }</if>
+         <if test="building_area!=null">and building_area=#{ building_area }</if>
+         <if test="total_area!=null">and total_area=#{ total_area }</if>
+         <if test="green_rate!=null">and green_rate=#{ green_rate }</if>
+         <if test="residences!=null">and residences=#{ residences }</if>
+         <if test="open_date!=null">and open_date=#{ open_date }</if>
+         <if test="sale_date!=null">and sale_date=#{ sale_date }</if>
+         <if test="finish_date!=null">and finish_date=#{ finish_date }</if>
+         <if test="license_account!=null">and license_account=#{ license_account }</if>
+         <if test="qualification_license!=null">and qualification_license=#{ qualification_license }</if>
+         <if test="legal_person!=null">and legal_person=#{ legal_person }</if>
+         <if test="legal_person_phone!=null">and legal_person_phone=#{ legal_person_phone }</if>
+         <if test="legal_person_postcode!=null">and legal_person_postcode=#{ legal_person_postcode }</if>
+         <if test="intro!=null">and intro=#{ intro }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+   limit 0,1
+  </select>
+  <select id="count" resultType="int" parameterType="com.work.bean.TbBuilding">
+   select count(1) from tb_building
+   <where>
+         <if test="id!=null">and id = #{ id }</if>
+         <if test="region!=null">and region = #{ region }</if>
+         <if test="name!=null">and name = #{ name }</if>
+         <if test="address!=null">and address = #{ address }</if>
+         <if test="code!=null">and code = #{ code }</if>
+         <if test="building_area!=null">and building_area = #{ building_area }</if>
+         <if test="total_area!=null">and total_area = #{ total_area }</if>
+         <if test="green_rate!=null">and green_rate = #{ green_rate }</if>
+         <if test="residences!=null">and residences = #{ residences }</if>
+         <if test="open_date!=null">and open_date = #{ open_date }</if>
+         <if test="sale_date!=null">and sale_date = #{ sale_date }</if>
+         <if test="finish_date!=null">and finish_date = #{ finish_date }</if>
+         <if test="license_account!=null">and license_account = #{ license_account }</if>
+         <if test="qualification_license!=null">and qualification_license = #{ qualification_license }</if>
+         <if test="legal_person!=null">and legal_person = #{ legal_person }</if>
+         <if test="legal_person_phone!=null">and legal_person_phone = #{ legal_person_phone }</if>
+         <if test="legal_person_postcode!=null">and legal_person_postcode = #{ legal_person_postcode }</if>
+         <if test="intro!=null">and intro = #{ intro }</if>
+         <if test="remark!=null">and remark = #{ remark }</if>
+       </where>
+  </select>
+ </mapper>
+ 

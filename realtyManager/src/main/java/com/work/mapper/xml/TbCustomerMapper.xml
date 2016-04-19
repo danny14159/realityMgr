@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.work.mapper.TbCustomerDao">
+  <insert id="insert" parameterType="com.work.bean.TbCustomer">
+   insert into tb_customer(id,name,phone,sex,address,occupation) values(#{id},#{name},#{phone},#{sex},#{address},#{occupation});
+  </insert>
+  <delete id="delete" parameterType="com.work.bean.TbCustomer">
+   delete from tb_customer
+   <where>
+    id=#{id}
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="phone!=null">and phone=#{ phone }</if>
+         <if test="sex!=null">and sex=#{ sex }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="occupation!=null">and occupation=#{ occupation }</if>
+       </where>
+  </delete>
+  <update id="update" parameterType="com.work.bean.TbCustomer">
+   update tb_customer
+   <set>
+         <if test="id!=null">id=#{ id },</if>
+         <if test="name!=null">name=#{ name },</if>
+         <if test="phone!=null">phone=#{ phone },</if>
+         <if test="sex!=null">sex=#{ sex },</if>
+         <if test="address!=null">address=#{ address },</if>
+         <if test="occupation!=null">occupation=#{ occupation },</if>
+       </set>
+   <where>
+    id=#{id}
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="phone!=null">and phone=#{ phone }</if>
+         <if test="sex!=null">and sex=#{ sex }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="occupation!=null">and occupation=#{ occupation }</if>
+       </where>
+  </update>
+  <select id="list" resultType="com.work.bean.TbCustomer" parameterType="com.work.bean.TbCustomer">
+   select id,name,phone,sex,address,occupation from tb_customer
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="phone!=null">and phone=#{ phone }</if>
+         <if test="sex!=null">and sex=#{ sex }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="occupation!=null">and occupation=#{ occupation }</if>
+       </where>
+  </select>
+  <select id="listByPage" resultType="com.work.bean.TbCustomer" parameterType="com.work.bean.TbCustomer">
+   select id,name,phone,sex,address,occupation from tb_customer
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="phone!=null">and phone=#{ phone }</if>
+         <if test="sex!=null">and sex=#{ sex }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="occupation!=null">and occupation=#{ occupation }</if>
+       </where>
+   limit #{offset},#{rows}
+  </select>
+  <select id="load" resultType="com.work.bean.TbCustomer" parameterType="com.work.bean.TbCustomer">
+   select id,name,phone,sex,address,occupation from tb_customer
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="name!=null">and name=#{ name }</if>
+         <if test="phone!=null">and phone=#{ phone }</if>
+         <if test="sex!=null">and sex=#{ sex }</if>
+         <if test="address!=null">and address=#{ address }</if>
+         <if test="occupation!=null">and occupation=#{ occupation }</if>
+       </where>
+   limit 0,1
+  </select>
+  <select id="count" resultType="int" parameterType="com.work.bean.TbCustomer">
+   select count(1) from tb_customer
+   <where>
+         <if test="id!=null">and id = #{ id }</if>
+         <if test="name!=null">and name = #{ name }</if>
+         <if test="phone!=null">and phone = #{ phone }</if>
+         <if test="sex!=null">and sex = #{ sex }</if>
+         <if test="address!=null">and address = #{ address }</if>
+         <if test="occupation!=null">and occupation = #{ occupation }</if>
+       </where>
+  </select>
+ </mapper>
+ 

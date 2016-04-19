@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.work.mapper.TbReceiptDao">
+  <insert id="insert" parameterType="com.work.bean.TbReceipt">
+   insert into tb_receipt(id,date,method,amount,client_id,payee,manager) values(#{id},#{date},#{method},#{amount},#{client_id},#{payee},#{manager});
+  </insert>
+  <delete id="delete" parameterType="com.work.bean.TbReceipt">
+   delete from tb_receipt
+   <where>
+    id=#{id}
+         <if test="date!=null">and date=#{ date }</if>
+         <if test="method!=null">and method=#{ method }</if>
+         <if test="amount!=null">and amount=#{ amount }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="payee!=null">and payee=#{ payee }</if>
+         <if test="manager!=null">and manager=#{ manager }</if>
+       </where>
+  </delete>
+  <update id="update" parameterType="com.work.bean.TbReceipt">
+   update tb_receipt
+   <set>
+         <if test="id!=null">id=#{ id },</if>
+         <if test="date!=null">date=#{ date },</if>
+         <if test="method!=null">method=#{ method },</if>
+         <if test="amount!=null">amount=#{ amount },</if>
+         <if test="client_id!=null">client_id=#{ client_id },</if>
+         <if test="payee!=null">payee=#{ payee },</if>
+         <if test="manager!=null">manager=#{ manager },</if>
+       </set>
+   <where>
+    id=#{id}
+         <if test="date!=null">and date=#{ date }</if>
+         <if test="method!=null">and method=#{ method }</if>
+         <if test="amount!=null">and amount=#{ amount }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="payee!=null">and payee=#{ payee }</if>
+         <if test="manager!=null">and manager=#{ manager }</if>
+       </where>
+  </update>
+  <select id="list" resultType="com.work.bean.TbReceipt" parameterType="com.work.bean.TbReceipt">
+   select id,date,method,amount,client_id,payee,manager from tb_receipt
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="date!=null">and date=#{ date }</if>
+         <if test="method!=null">and method=#{ method }</if>
+         <if test="amount!=null">and amount=#{ amount }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="payee!=null">and payee=#{ payee }</if>
+         <if test="manager!=null">and manager=#{ manager }</if>
+       </where>
+  </select>
+  <select id="listByPage" resultType="com.work.bean.TbReceipt" parameterType="com.work.bean.TbReceipt">
+   select id,date,method,amount,client_id,payee,manager from tb_receipt
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="date!=null">and date=#{ date }</if>
+         <if test="method!=null">and method=#{ method }</if>
+         <if test="amount!=null">and amount=#{ amount }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="payee!=null">and payee=#{ payee }</if>
+         <if test="manager!=null">and manager=#{ manager }</if>
+       </where>
+   limit #{offset},#{rows}
+  </select>
+  <select id="load" resultType="com.work.bean.TbReceipt" parameterType="com.work.bean.TbReceipt">
+   select id,date,method,amount,client_id,payee,manager from tb_receipt
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="date!=null">and date=#{ date }</if>
+         <if test="method!=null">and method=#{ method }</if>
+         <if test="amount!=null">and amount=#{ amount }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="payee!=null">and payee=#{ payee }</if>
+         <if test="manager!=null">and manager=#{ manager }</if>
+       </where>
+   limit 0,1
+  </select>
+  <select id="count" resultType="int" parameterType="com.work.bean.TbReceipt">
+   select count(1) from tb_receipt
+   <where>
+         <if test="id!=null">and id = #{ id }</if>
+         <if test="date!=null">and date = #{ date }</if>
+         <if test="method!=null">and method = #{ method }</if>
+         <if test="amount!=null">and amount = #{ amount }</if>
+         <if test="client_id!=null">and client_id = #{ client_id }</if>
+         <if test="payee!=null">and payee = #{ payee }</if>
+         <if test="manager!=null">and manager = #{ manager }</if>
+       </where>
+  </select>
+ </mapper>
+ 

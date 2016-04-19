@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.work.mapper.TbHouseDao">
+  <insert id="insert" parameterType="com.work.bean.TbHouse">
+   insert into tb_house(id,location,building_no,unit_no,house_no,house_type_id,height,area,inner_area,single_price,delivery_time,decorate_detail,remark) values(#{id},#{location},#{building_no},#{unit_no},#{house_no},#{house_type_id},#{height},#{area},#{inner_area},#{single_price},#{delivery_time},#{decorate_detail},#{remark});
+  </insert>
+  <delete id="delete" parameterType="com.work.bean.TbHouse">
+   delete from tb_house
+   <where>
+    id=#{id}
+         <if test="location!=null">and location=#{ location }</if>
+         <if test="building_no!=null">and building_no=#{ building_no }</if>
+         <if test="unit_no!=null">and unit_no=#{ unit_no }</if>
+         <if test="house_no!=null">and house_no=#{ house_no }</if>
+         <if test="house_type_id!=null">and house_type_id=#{ house_type_id }</if>
+         <if test="height!=null">and height=#{ height }</if>
+         <if test="area!=null">and area=#{ area }</if>
+         <if test="inner_area!=null">and inner_area=#{ inner_area }</if>
+         <if test="single_price!=null">and single_price=#{ single_price }</if>
+         <if test="delivery_time!=null">and delivery_time=#{ delivery_time }</if>
+         <if test="decorate_detail!=null">and decorate_detail=#{ decorate_detail }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </delete>
+  <update id="update" parameterType="com.work.bean.TbHouse">
+   update tb_house
+   <set>
+         <if test="id!=null">id=#{ id },</if>
+         <if test="location!=null">location=#{ location },</if>
+         <if test="building_no!=null">building_no=#{ building_no },</if>
+         <if test="unit_no!=null">unit_no=#{ unit_no },</if>
+         <if test="house_no!=null">house_no=#{ house_no },</if>
+         <if test="house_type_id!=null">house_type_id=#{ house_type_id },</if>
+         <if test="height!=null">height=#{ height },</if>
+         <if test="area!=null">area=#{ area },</if>
+         <if test="inner_area!=null">inner_area=#{ inner_area },</if>
+         <if test="single_price!=null">single_price=#{ single_price },</if>
+         <if test="delivery_time!=null">delivery_time=#{ delivery_time },</if>
+         <if test="decorate_detail!=null">decorate_detail=#{ decorate_detail },</if>
+         <if test="remark!=null">remark=#{ remark },</if>
+       </set>
+   <where>
+    id=#{id}
+         <if test="location!=null">and location=#{ location }</if>
+         <if test="building_no!=null">and building_no=#{ building_no }</if>
+         <if test="unit_no!=null">and unit_no=#{ unit_no }</if>
+         <if test="house_no!=null">and house_no=#{ house_no }</if>
+         <if test="house_type_id!=null">and house_type_id=#{ house_type_id }</if>
+         <if test="height!=null">and height=#{ height }</if>
+         <if test="area!=null">and area=#{ area }</if>
+         <if test="inner_area!=null">and inner_area=#{ inner_area }</if>
+         <if test="single_price!=null">and single_price=#{ single_price }</if>
+         <if test="delivery_time!=null">and delivery_time=#{ delivery_time }</if>
+         <if test="decorate_detail!=null">and decorate_detail=#{ decorate_detail }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </update>
+  <select id="list" resultType="com.work.bean.TbHouse" parameterType="com.work.bean.TbHouse">
+   select id,location,building_no,unit_no,house_no,house_type_id,height,area,inner_area,single_price,delivery_time,decorate_detail,remark from tb_house
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="location!=null">and location=#{ location }</if>
+         <if test="building_no!=null">and building_no=#{ building_no }</if>
+         <if test="unit_no!=null">and unit_no=#{ unit_no }</if>
+         <if test="house_no!=null">and house_no=#{ house_no }</if>
+         <if test="house_type_id!=null">and house_type_id=#{ house_type_id }</if>
+         <if test="height!=null">and height=#{ height }</if>
+         <if test="area!=null">and area=#{ area }</if>
+         <if test="inner_area!=null">and inner_area=#{ inner_area }</if>
+         <if test="single_price!=null">and single_price=#{ single_price }</if>
+         <if test="delivery_time!=null">and delivery_time=#{ delivery_time }</if>
+         <if test="decorate_detail!=null">and decorate_detail=#{ decorate_detail }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </select>
+  <select id="listByPage" resultType="com.work.bean.TbHouse" parameterType="com.work.bean.TbHouse">
+   select id,location,building_no,unit_no,house_no,house_type_id,height,area,inner_area,single_price,delivery_time,decorate_detail,remark from tb_house
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="location!=null">and location=#{ location }</if>
+         <if test="building_no!=null">and building_no=#{ building_no }</if>
+         <if test="unit_no!=null">and unit_no=#{ unit_no }</if>
+         <if test="house_no!=null">and house_no=#{ house_no }</if>
+         <if test="house_type_id!=null">and house_type_id=#{ house_type_id }</if>
+         <if test="height!=null">and height=#{ height }</if>
+         <if test="area!=null">and area=#{ area }</if>
+         <if test="inner_area!=null">and inner_area=#{ inner_area }</if>
+         <if test="single_price!=null">and single_price=#{ single_price }</if>
+         <if test="delivery_time!=null">and delivery_time=#{ delivery_time }</if>
+         <if test="decorate_detail!=null">and decorate_detail=#{ decorate_detail }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+   limit #{offset},#{rows}
+  </select>
+  <select id="load" resultType="com.work.bean.TbHouse" parameterType="com.work.bean.TbHouse">
+   select id,location,building_no,unit_no,house_no,house_type_id,height,area,inner_area,single_price,delivery_time,decorate_detail,remark from tb_house
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="location!=null">and location=#{ location }</if>
+         <if test="building_no!=null">and building_no=#{ building_no }</if>
+         <if test="unit_no!=null">and unit_no=#{ unit_no }</if>
+         <if test="house_no!=null">and house_no=#{ house_no }</if>
+         <if test="house_type_id!=null">and house_type_id=#{ house_type_id }</if>
+         <if test="height!=null">and height=#{ height }</if>
+         <if test="area!=null">and area=#{ area }</if>
+         <if test="inner_area!=null">and inner_area=#{ inner_area }</if>
+         <if test="single_price!=null">and single_price=#{ single_price }</if>
+         <if test="delivery_time!=null">and delivery_time=#{ delivery_time }</if>
+         <if test="decorate_detail!=null">and decorate_detail=#{ decorate_detail }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+   limit 0,1
+  </select>
+  <select id="count" resultType="int" parameterType="com.work.bean.TbHouse">
+   select count(1) from tb_house
+   <where>
+         <if test="id!=null">and id = #{ id }</if>
+         <if test="location!=null">and location = #{ location }</if>
+         <if test="building_no!=null">and building_no = #{ building_no }</if>
+         <if test="unit_no!=null">and unit_no = #{ unit_no }</if>
+         <if test="house_no!=null">and house_no = #{ house_no }</if>
+         <if test="house_type_id!=null">and house_type_id = #{ house_type_id }</if>
+         <if test="height!=null">and height = #{ height }</if>
+         <if test="area!=null">and area = #{ area }</if>
+         <if test="inner_area!=null">and inner_area = #{ inner_area }</if>
+         <if test="single_price!=null">and single_price = #{ single_price }</if>
+         <if test="delivery_time!=null">and delivery_time = #{ delivery_time }</if>
+         <if test="decorate_detail!=null">and decorate_detail = #{ decorate_detail }</if>
+         <if test="remark!=null">and remark = #{ remark }</if>
+       </where>
+  </select>
+ </mapper>
+ 

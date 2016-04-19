@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="com.work.mapper.TbOrderDao">
+  <insert id="insert" parameterType="com.work.bean.TbOrder">
+   insert into tb_order(id,sign_time,client_id,client_name,client_phone,client_certifacate_type,client_certifacate,client_address,client_remark,house_id,pay_method,initial_payment,house_price,loan_amount,loan_year,loan_bank,cpf_amount,cpf_year,cpf_bank,remark) values(#{id},#{sign_time},#{client_id},#{client_name},#{client_phone},#{client_certifacate_type},#{client_certifacate},#{client_address},#{client_remark},#{house_id},#{pay_method},#{initial_payment},#{house_price},#{loan_amount},#{loan_year},#{loan_bank},#{cpf_amount},#{cpf_year},#{cpf_bank},#{remark});
+  </insert>
+  <delete id="delete" parameterType="com.work.bean.TbOrder">
+   delete from tb_order
+   <where>
+    id=#{id}
+         <if test="sign_time!=null">and sign_time=#{ sign_time }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="client_name!=null">and client_name=#{ client_name }</if>
+         <if test="client_phone!=null">and client_phone=#{ client_phone }</if>
+         <if test="client_certifacate_type!=null">and client_certifacate_type=#{ client_certifacate_type }</if>
+         <if test="client_certifacate!=null">and client_certifacate=#{ client_certifacate }</if>
+         <if test="client_address!=null">and client_address=#{ client_address }</if>
+         <if test="client_remark!=null">and client_remark=#{ client_remark }</if>
+         <if test="house_id!=null">and house_id=#{ house_id }</if>
+         <if test="pay_method!=null">and pay_method=#{ pay_method }</if>
+         <if test="initial_payment!=null">and initial_payment=#{ initial_payment }</if>
+         <if test="house_price!=null">and house_price=#{ house_price }</if>
+         <if test="loan_amount!=null">and loan_amount=#{ loan_amount }</if>
+         <if test="loan_year!=null">and loan_year=#{ loan_year }</if>
+         <if test="loan_bank!=null">and loan_bank=#{ loan_bank }</if>
+         <if test="cpf_amount!=null">and cpf_amount=#{ cpf_amount }</if>
+         <if test="cpf_year!=null">and cpf_year=#{ cpf_year }</if>
+         <if test="cpf_bank!=null">and cpf_bank=#{ cpf_bank }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </delete>
+  <update id="update" parameterType="com.work.bean.TbOrder">
+   update tb_order
+   <set>
+         <if test="id!=null">id=#{ id },</if>
+         <if test="sign_time!=null">sign_time=#{ sign_time },</if>
+         <if test="client_id!=null">client_id=#{ client_id },</if>
+         <if test="client_name!=null">client_name=#{ client_name },</if>
+         <if test="client_phone!=null">client_phone=#{ client_phone },</if>
+         <if test="client_certifacate_type!=null">client_certifacate_type=#{ client_certifacate_type },</if>
+         <if test="client_certifacate!=null">client_certifacate=#{ client_certifacate },</if>
+         <if test="client_address!=null">client_address=#{ client_address },</if>
+         <if test="client_remark!=null">client_remark=#{ client_remark },</if>
+         <if test="house_id!=null">house_id=#{ house_id },</if>
+         <if test="pay_method!=null">pay_method=#{ pay_method },</if>
+         <if test="initial_payment!=null">initial_payment=#{ initial_payment },</if>
+         <if test="house_price!=null">house_price=#{ house_price },</if>
+         <if test="loan_amount!=null">loan_amount=#{ loan_amount },</if>
+         <if test="loan_year!=null">loan_year=#{ loan_year },</if>
+         <if test="loan_bank!=null">loan_bank=#{ loan_bank },</if>
+         <if test="cpf_amount!=null">cpf_amount=#{ cpf_amount },</if>
+         <if test="cpf_year!=null">cpf_year=#{ cpf_year },</if>
+         <if test="cpf_bank!=null">cpf_bank=#{ cpf_bank },</if>
+         <if test="remark!=null">remark=#{ remark },</if>
+       </set>
+   <where>
+    id=#{id}
+         <if test="sign_time!=null">and sign_time=#{ sign_time }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="client_name!=null">and client_name=#{ client_name }</if>
+         <if test="client_phone!=null">and client_phone=#{ client_phone }</if>
+         <if test="client_certifacate_type!=null">and client_certifacate_type=#{ client_certifacate_type }</if>
+         <if test="client_certifacate!=null">and client_certifacate=#{ client_certifacate }</if>
+         <if test="client_address!=null">and client_address=#{ client_address }</if>
+         <if test="client_remark!=null">and client_remark=#{ client_remark }</if>
+         <if test="house_id!=null">and house_id=#{ house_id }</if>
+         <if test="pay_method!=null">and pay_method=#{ pay_method }</if>
+         <if test="initial_payment!=null">and initial_payment=#{ initial_payment }</if>
+         <if test="house_price!=null">and house_price=#{ house_price }</if>
+         <if test="loan_amount!=null">and loan_amount=#{ loan_amount }</if>
+         <if test="loan_year!=null">and loan_year=#{ loan_year }</if>
+         <if test="loan_bank!=null">and loan_bank=#{ loan_bank }</if>
+         <if test="cpf_amount!=null">and cpf_amount=#{ cpf_amount }</if>
+         <if test="cpf_year!=null">and cpf_year=#{ cpf_year }</if>
+         <if test="cpf_bank!=null">and cpf_bank=#{ cpf_bank }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </update>
+  <select id="list" resultType="com.work.bean.TbOrder" parameterType="com.work.bean.TbOrder">
+   select id,sign_time,client_id,client_name,client_phone,client_certifacate_type,client_certifacate,client_address,client_remark,house_id,pay_method,initial_payment,house_price,loan_amount,loan_year,loan_bank,cpf_amount,cpf_year,cpf_bank,remark from tb_order
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="sign_time!=null">and sign_time=#{ sign_time }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="client_name!=null">and client_name=#{ client_name }</if>
+         <if test="client_phone!=null">and client_phone=#{ client_phone }</if>
+         <if test="client_certifacate_type!=null">and client_certifacate_type=#{ client_certifacate_type }</if>
+         <if test="client_certifacate!=null">and client_certifacate=#{ client_certifacate }</if>
+         <if test="client_address!=null">and client_address=#{ client_address }</if>
+         <if test="client_remark!=null">and client_remark=#{ client_remark }</if>
+         <if test="house_id!=null">and house_id=#{ house_id }</if>
+         <if test="pay_method!=null">and pay_method=#{ pay_method }</if>
+         <if test="initial_payment!=null">and initial_payment=#{ initial_payment }</if>
+         <if test="house_price!=null">and house_price=#{ house_price }</if>
+         <if test="loan_amount!=null">and loan_amount=#{ loan_amount }</if>
+         <if test="loan_year!=null">and loan_year=#{ loan_year }</if>
+         <if test="loan_bank!=null">and loan_bank=#{ loan_bank }</if>
+         <if test="cpf_amount!=null">and cpf_amount=#{ cpf_amount }</if>
+         <if test="cpf_year!=null">and cpf_year=#{ cpf_year }</if>
+         <if test="cpf_bank!=null">and cpf_bank=#{ cpf_bank }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+  </select>
+  <select id="listByPage" resultType="com.work.bean.TbOrder" parameterType="com.work.bean.TbOrder">
+   select id,sign_time,client_id,client_name,client_phone,client_certifacate_type,client_certifacate,client_address,client_remark,house_id,pay_method,initial_payment,house_price,loan_amount,loan_year,loan_bank,cpf_amount,cpf_year,cpf_bank,remark from tb_order
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="sign_time!=null">and sign_time=#{ sign_time }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="client_name!=null">and client_name=#{ client_name }</if>
+         <if test="client_phone!=null">and client_phone=#{ client_phone }</if>
+         <if test="client_certifacate_type!=null">and client_certifacate_type=#{ client_certifacate_type }</if>
+         <if test="client_certifacate!=null">and client_certifacate=#{ client_certifacate }</if>
+         <if test="client_address!=null">and client_address=#{ client_address }</if>
+         <if test="client_remark!=null">and client_remark=#{ client_remark }</if>
+         <if test="house_id!=null">and house_id=#{ house_id }</if>
+         <if test="pay_method!=null">and pay_method=#{ pay_method }</if>
+         <if test="initial_payment!=null">and initial_payment=#{ initial_payment }</if>
+         <if test="house_price!=null">and house_price=#{ house_price }</if>
+         <if test="loan_amount!=null">and loan_amount=#{ loan_amount }</if>
+         <if test="loan_year!=null">and loan_year=#{ loan_year }</if>
+         <if test="loan_bank!=null">and loan_bank=#{ loan_bank }</if>
+         <if test="cpf_amount!=null">and cpf_amount=#{ cpf_amount }</if>
+         <if test="cpf_year!=null">and cpf_year=#{ cpf_year }</if>
+         <if test="cpf_bank!=null">and cpf_bank=#{ cpf_bank }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+   limit #{offset},#{rows}
+  </select>
+  <select id="load" resultType="com.work.bean.TbOrder" parameterType="com.work.bean.TbOrder">
+   select id,sign_time,client_id,client_name,client_phone,client_certifacate_type,client_certifacate,client_address,client_remark,house_id,pay_method,initial_payment,house_price,loan_amount,loan_year,loan_bank,cpf_amount,cpf_year,cpf_bank,remark from tb_order
+   <where>
+         <if test="id!=null">and id=#{ id }</if>
+         <if test="sign_time!=null">and sign_time=#{ sign_time }</if>
+         <if test="client_id!=null">and client_id=#{ client_id }</if>
+         <if test="client_name!=null">and client_name=#{ client_name }</if>
+         <if test="client_phone!=null">and client_phone=#{ client_phone }</if>
+         <if test="client_certifacate_type!=null">and client_certifacate_type=#{ client_certifacate_type }</if>
+         <if test="client_certifacate!=null">and client_certifacate=#{ client_certifacate }</if>
+         <if test="client_address!=null">and client_address=#{ client_address }</if>
+         <if test="client_remark!=null">and client_remark=#{ client_remark }</if>
+         <if test="house_id!=null">and house_id=#{ house_id }</if>
+         <if test="pay_method!=null">and pay_method=#{ pay_method }</if>
+         <if test="initial_payment!=null">and initial_payment=#{ initial_payment }</if>
+         <if test="house_price!=null">and house_price=#{ house_price }</if>
+         <if test="loan_amount!=null">and loan_amount=#{ loan_amount }</if>
+         <if test="loan_year!=null">and loan_year=#{ loan_year }</if>
+         <if test="loan_bank!=null">and loan_bank=#{ loan_bank }</if>
+         <if test="cpf_amount!=null">and cpf_amount=#{ cpf_amount }</if>
+         <if test="cpf_year!=null">and cpf_year=#{ cpf_year }</if>
+         <if test="cpf_bank!=null">and cpf_bank=#{ cpf_bank }</if>
+         <if test="remark!=null">and remark=#{ remark }</if>
+       </where>
+   limit 0,1
+  </select>
+  <select id="count" resultType="int" parameterType="com.work.bean.TbOrder">
+   select count(1) from tb_order
+   <where>
+         <if test="id!=null">and id = #{ id }</if>
+         <if test="sign_time!=null">and sign_time = #{ sign_time }</if>
+         <if test="client_id!=null">and client_id = #{ client_id }</if>
+         <if test="client_name!=null">and client_name = #{ client_name }</if>
+         <if test="client_phone!=null">and client_phone = #{ client_phone }</if>
+         <if test="client_certifacate_type!=null">and client_certifacate_type = #{ client_certifacate_type }</if>
+         <if test="client_certifacate!=null">and client_certifacate = #{ client_certifacate }</if>
+         <if test="client_address!=null">and client_address = #{ client_address }</if>
+         <if test="client_remark!=null">and client_remark = #{ client_remark }</if>
+         <if test="house_id!=null">and house_id = #{ house_id }</if>
+         <if test="pay_method!=null">and pay_method = #{ pay_method }</if>
+         <if test="initial_payment!=null">and initial_payment = #{ initial_payment }</if>
+         <if test="house_price!=null">and house_price = #{ house_price }</if>
+         <if test="loan_amount!=null">and loan_amount = #{ loan_amount }</if>
+         <if test="loan_year!=null">and loan_year = #{ loan_year }</if>
+         <if test="loan_bank!=null">and loan_bank = #{ loan_bank }</if>
+         <if test="cpf_amount!=null">and cpf_amount = #{ cpf_amount }</if>
+         <if test="cpf_year!=null">and cpf_year = #{ cpf_year }</if>
+         <if test="cpf_bank!=null">and cpf_bank = #{ cpf_bank }</if>
+         <if test="remark!=null">and remark = #{ remark }</if>
+       </where>
+  </select>
+ </mapper>
+ 
