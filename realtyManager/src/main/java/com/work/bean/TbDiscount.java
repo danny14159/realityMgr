@@ -13,13 +13,13 @@ public class TbDiscount  {
 	/**
 	 * 开始时间
 	 */
-	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-dd-MM HH:mm:ss")
+	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-MM-dd")
 	private java.util.Date degin_time;
 
 	/**
 	 * 结束时间
 	 */
-	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-dd-MM HH:mm:ss")
+	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-MM-dd")
 	private java.util.Date end_time;
 
 	/**

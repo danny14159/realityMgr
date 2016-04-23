@@ -13,7 +13,7 @@ public class TbSchedule  {
 	/**
 	 * 预定时间
 	 */
-	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-dd-MM HH:mm:ss")
+	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-MM-dd")
 	private java.util.Date book_time;
 
 	/**

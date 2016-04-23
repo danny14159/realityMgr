@@ -10,13 +10,13 @@ import com.work.mapper.BasicDao;
 import com.work.mapper.TbScheduleDao;
 
 @Controller
-@RequestMapping("/sche")
+@RequestMapping("/schedule")
 public class ScheduleController extends BasicController<TbSchedule>{
 	
 	@Resource
 	private TbScheduleDao tbScheduleDao;
 	
-	public static final String PREFIX="tbScheduler/";
+	public static final String PREFIX="tbSchedule/";
 
 	@Override
 	protected String getPrefix() {

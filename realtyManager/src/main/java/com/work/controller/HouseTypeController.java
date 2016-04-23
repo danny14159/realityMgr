@@ -16,7 +16,7 @@ public class HouseTypeController extends BasicController<TbHouseType>{
 	@Resource
 	private TbHouseTypeDao tbHouseTypeDao;
 	
-	public static final String PREFIX="tbHouse/";
+	public static final String PREFIX="tbHouseType/";
 
 	@Override
 	protected String getPrefix() {

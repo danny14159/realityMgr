@@ -53,19 +53,19 @@ public class TbBuilding  {
 	/**
 	 * 开盘日期
 	 */
-	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-dd-MM HH:mm:ss")
+	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-MM-dd")
 	private java.util.Date open_date;
 
 	/**
 	 * 预售日期
 	 */
-	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-dd-MM HH:mm:ss")
+	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-MM-dd")
 	private java.util.Date sale_date;
 
 	/**
 	 * 竣工日期
 	 */
-	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-dd-MM HH:mm:ss")
+	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-MM-dd")
 	private java.util.Date finish_date;
 
 	/**

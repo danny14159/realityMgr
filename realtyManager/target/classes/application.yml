@@ -1,14 +1,14 @@
 # Server settings  
 server:  
-    port: 80
+    port: 81
     address: localhost  
   
 # DATASOURCE  
 jdbc:  
     driverClass: com.mysql.jdbc.Driver  
-    url: jdbc:mysql://localhost:3306/realitymgr?useUnicode=true&characterEncoding=utf-8  
-    username: root 
-    password: 804956748
+    url: jdbc:mysql://115.28.158.206:3306/realitymgr?useUnicode=true&characterEncoding=utf-8  
+    username: realitymgr 
+    password: realitymgradmin
   
 # SPRING PROFILES  
 spring:         

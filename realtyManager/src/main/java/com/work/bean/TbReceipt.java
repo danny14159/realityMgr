@@ -13,7 +13,7 @@ public class TbReceipt  {
 	/**
 	 * 收款日期
 	 */
-	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-dd-MM HH:mm:ss")
+	@org.springframework.format.annotation.DateTimeFormat(pattern="yyyy-MM-dd")
 	private java.util.Date date;
 
 	/**
