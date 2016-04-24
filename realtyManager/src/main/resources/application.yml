@@ -1,6 +1,6 @@
 # Server settings  
 server:  
-    port: 81
+    port: 82
     address: localhost  
   
 # DATASOURCE  
