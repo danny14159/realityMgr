@@ -19,12 +19,16 @@ import com.work.util.M;
 
 @Controller
 @SpringBootApplication
-@RequestMapping("/app")
 public class MainController extends SpringBootServletInitializer{
 	
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
 		return application.sources(MainController.class);
+	}
+	@RequestMapping("/")
+	public String index(){
+		
+		return "redirect:/app/login";
 	}
 	
 	
@@ -36,7 +40,7 @@ public class MainController extends SpringBootServletInitializer{
 	/**login page
 	 * @return
 	 */
-	@RequestMapping(value="/login",method=RequestMethod.GET)
+	@RequestMapping(value="/app/login",method=RequestMethod.GET)
 	public String login() {
 
 		return "login";
@@ -56,7 +60,7 @@ public class MainController extends SpringBootServletInitializer{
 	 * @param password
 	 * @return
 	 */
-	@RequestMapping(value="/login",method=RequestMethod.POST)
+	@RequestMapping(value="/app/login",method=RequestMethod.POST)
 	public String login(String username,String password,HttpServletRequest req,Model model){
 		
 		 TbUser u = userDao.load(M.make("username", username).put("password", password).asMap());
@@ -71,7 +75,7 @@ public class MainController extends SpringBootServletInitializer{
 		 return "redirect:/app/frame";
 	}
 	
-	@RequestMapping("/frame")
+	@RequestMapping("/app/frame")
 	public String frame(){
 		
 		return "frame";

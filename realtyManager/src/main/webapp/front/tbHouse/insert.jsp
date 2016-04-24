@@ -80,7 +80,7 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputhouse_type_id" class="col-sm-4 control-label">
-    	房型id，外键
+    	房型id
     </label>
     <div class="col-sm-6">
     

@@ -36,8 +36,8 @@ public class MyBatisConfiguration implements EnvironmentAware {
 	@Resource(name = "writeDataSource")
 	private DataSource writeDataSource;
 
-	@Resource(name = "readDataSources")
-	private List<Object> readDataSources;
+/*	@Resource(name = "readDataSources")
+	private List<Object> readDataSources;*/
 
 	@Override
 	public void setEnvironment(Environment environment) {

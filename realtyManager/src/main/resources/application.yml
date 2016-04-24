@@ -6,7 +6,7 @@ server:
 # DATASOURCE  
 jdbc:  
     driverClass: com.mysql.jdbc.Driver  
-    url: jdbc:mysql://115.28.158.206:3306/realitymgr?useUnicode=true&characterEncoding=utf-8  
+    url: jdbc:mysql://115.28.158.206:3306/realityMgr?useUnicode=true&characterEncoding=utf-8  
     username: realitymgr 
     password: realitymgradmin
   

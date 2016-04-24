@@ -39,11 +39,12 @@ public class DataBaseConfiguration implements EnvironmentAware {
 		datasource.setDriverClassName(propertyResolver.getProperty("driverClassName"));
 		datasource.setUsername(propertyResolver.getProperty("username"));
 		datasource.setPassword(propertyResolver.getProperty("password"));
+		datasource.setValidationQuery("select 1");
 
 		return datasource;
 	}
 
-	@Bean(name = "readOneDataSource", destroyMethod = "close", initMethod = "init")
+/*	@Bean(name = "readOneDataSource", destroyMethod = "close", initMethod = "init")
 	public DataSource readOneDataSource() {
 		log.debug("Configruing Read One DataSource");
 
@@ -75,5 +76,5 @@ public class DataBaseConfiguration implements EnvironmentAware {
 		dataSources.add(readOneDataSource());
 		dataSources.add(readTowDataSource());
 		return dataSources;
-	}
+	}*/
 }
