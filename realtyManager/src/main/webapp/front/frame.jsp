@@ -27,7 +27,7 @@
             <!-- <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li> -->
-            <li><a href="/app/login">退出</a></li>
+            <li><a href="/app/login"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;退出</a></li>
           </ul>
         </div>
       </div>
@@ -37,19 +37,19 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="/user" target="main">用户管理</a></li>
-            <li><a href="/customer" target="main">客户管理</a></li>
-            <li><a href="/discount" target="main">折扣管理</a></li>
-            <li><a href="/schedule" target="main">预定管理</a></li>
+            <li class="active"><a href="/user" target="main"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;用户管理</a></li>
+            <li><a href="/customer" target="main"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>&nbsp;客户管理</a></li>
+            <li><a href="/discount" target="main"><span class="glyphicon glyphicon-time" aria-hidden="true"></span>&nbsp;折扣管理</a></li>
+            <li><a href="/schedule" target="main"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;预定管理</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="/building" target="main">楼盘管理</a></li>
-            <li><a href="/housetype" target="main">房型管理</a></li>
-            <li><a href="/house" target="main">房屋管理</a></li>
+            <li><a href="/building" target="main"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;楼盘管理</a></li>
+            <li><a href="/housetype" target="main"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp;房型管理</a></li>
+            <li><a href="/house" target="main"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;房屋管理</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="/order" target="main">订单管理</a></li>
-            <li><a href="/receipt" target="main">收据管理</a></li>
+            <li><a href="/order" target="main"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;订单管理</a></li>
+            <li><a href="/receipt" target="main"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;收据管理</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
