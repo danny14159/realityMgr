@@ -61,9 +61,22 @@ public class TbHouseType  {
 	private String remark;
 
 	/**
-	 * 所属楼盘
+	 * 所属楼盘id
 	 */
 	private Integer tb_house_id;
+	
+	/**
+	 * 所属楼盘名称
+	 */
+	private String house_name;
+
+	public String getHouse_name() {
+		return house_name;
+	}
+
+	public void setHouse_name(String house_name) {
+		this.house_name = house_name;
+	}
 
 	public void setId(Integer id){
 		this.id=id;

@@ -32,14 +32,16 @@
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbSchedule" parameterType="com.work.bean.TbSchedule">
-   select id,book_time,client_id,house_id,payed_money from tb_schedule
-   <where>
-         <if test="id!=null">and id=#{ id }</if>
-         <if test="book_time!=null">and book_time=#{ book_time }</if>
-         <if test="client_id!=null">and client_id=#{ client_id }</if>
-         <if test="house_id!=null">and house_id=#{ house_id }</if>
-         <if test="payed_money!=null">and payed_money=#{ payed_money }</if>
-       </where>
+   select ts.id,
+   ts.book_time,ts.client_id,ts.house_id,ts.payed_money,tc.name as client_name from tb_schedule ts
+   left join tb_customer tc on ts.client_id=tc.id
+	<where>
+		<if test="id!=null">and ts.id=#{ id }</if>
+		<if test="book_time!=null">and ts.book_time=#{ book_time }</if>
+		<if test="client_id!=null">and ts.client_id=#{ client_id }</if>
+		<if test="house_id!=null">and ts.house_id=#{ house_id }</if>
+		<if test="payed_money!=null">and ts.payed_money=#{ payed_money }</if>
+	</where>
   </select>
   <select id="listByPage" resultType="com.work.bean.TbSchedule" parameterType="com.work.bean.TbSchedule">
    select id,book_time,client_id,house_id,payed_money from tb_schedule

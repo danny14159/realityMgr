@@ -80,12 +80,15 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputclient_id" class="col-sm-4 control-label">
-    	客户id
+    	客户
     </label>
     <div class="col-sm-6">
     
-   
-      <input type="text" class="form-control required" id="inputclient_id" placeholder="客户id" name="client_id">
+   	   <select name="client_id" class="form-control required">
+   			<c:forEach items="${customer }" var="i">
+   				<option value="${i.id }">${i.name }</option>
+   			</c:forEach>
+   		</select>
     
     </div>
   </div>

@@ -16,7 +16,7 @@
 
 <h1 class="page-header">预定 - 查看</h1>
 
-<a href="schedule/insert" class="btn btn-default">添加</a><table class="table table-striped">
+<a href="schedule/insert" class="btn btn-default btn-xs">添加</a><table class="table table-striped table-bordered">
 <tr>
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	
@@ -25,9 +25,9 @@
 	
 	<th>预定时间</th>
 	
-	<th>客户id</th>
+	<th>客户名称</th>
 	
-	<th>房屋id</th>
+	<th>房屋编号</th>
 	
 	<th>已交款</th>
 	
@@ -49,7 +49,7 @@
 	
 	<td>
 		
-		<c:out value="${i.client_id}"></c:out>
+		<c:out value="${i.client_name}"></c:out>
 	</td>
 	
 	<td>

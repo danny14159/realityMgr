@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<h1 class="page-header">预定 - 新增</h1>
+<h1 class="page-header">预定</h1>
 
 <form form-ajax class="form-horizontal" id="main-form" action="/schedule/insert" forward="/schedule">
 
@@ -38,12 +38,15 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputclient_id" class="col-sm-4 control-label">
-    	客户id
+    	客户
     </label>
     <div class="col-sm-6">
     
-   
-      <input type="text" class="form-control required" id="inputclient_id" placeholder="客户id" name="client_id">
+    <select class="form-control" name="client_id">
+    <c:forEach items="${customers }" var="i">
+    	<option value="${i.id }">${i.name }</option>
+    </c:forEach>
+   </select>
     
     </div>
   </div>
@@ -52,12 +55,16 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputhouse_id" class="col-sm-4 control-label">
-    	房屋id
+    	房屋编号：
     </label>
     <div class="col-sm-6">
     
    
-      <input type="text" class="form-control required" id="inputhouse_id" placeholder="房屋id" name="house_id">
+       <select class="form-control" name="house_id">
+    <c:forEach items="${houses }" var="i">
+    	<option value="${i.id }">${i.id }</option>
+    </c:forEach>
+   </select>
     
     </div>
   </div>
@@ -71,7 +78,7 @@
     <div class="col-sm-6">
     
    
-      <input type="text" class="form-control required" id="inputpayed_money" placeholder="已交款" name="payed_money">
+      <input type="text" class="form-control required" id="inputpayed_money" placeholder="填写已交金额" name="payed_money">
     
     </div>
   </div>

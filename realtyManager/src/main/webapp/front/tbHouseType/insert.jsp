@@ -1,5 +1,3 @@
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -139,8 +137,16 @@
     </label>
     <div class="col-sm-6">
     
-   
-      <input type="text" class="form-control required" id="inputhouse_type" placeholder="套型" name="house_type">
+   		<select class="form-control" name="house_type">
+   			<option value="422">四室二卫二厅</option>
+   			<option value="421">四室二卫一厅</option>
+   			<option value="322">三室二卫二厅</option>
+   			<option value="321">三室二卫一厅</option>
+   			<option value="121">一室二卫一厅</option>
+   			<option value="111">一室一卫一厅</option>
+   			<option value="221">二室二卫一厅</option>
+   			<option value="211">二室一卫一厅</option>
+   		</select>
     
     </div>
   </div>
@@ -167,8 +173,11 @@
     </label>
     <div class="col-sm-6">
     
-   
-      <input type="text" class="form-control required" id="inputtb_house_id" placeholder="所属楼盘" name="tb_house_id">
+   		<select name="tb_house_id" class="form-control required">
+   			<c:forEach items="${build }" var="i">
+   				<option value="${i.id }">${i.name }</option>
+   			</c:forEach>
+   		</select>
     
     </div>
   </div>

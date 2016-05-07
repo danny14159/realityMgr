@@ -1,5 +1,3 @@
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -57,7 +55,7 @@
     <div class="col-sm-6">
     
    
-      <input type="text" class="form-control required" id="inputdiscount" placeholder="几折" name="discount">
+      <input type="number" class="form-control required" id="inputdiscount" placeholder="几折" name="discount">
     
     </div>
   </div>

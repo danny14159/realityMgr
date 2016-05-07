@@ -1,6 +1,3 @@
-
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -16,7 +13,7 @@
 
 <h1 class="page-header">房型 - 查看</h1>
 
-<a href="housetype/insert" class="btn btn-default">添加</a><table class="table table-striped">
+<a href="housetype/insert" class="btn btn-default btn-xs">添加</a><table class="table table-striped table-bordered">
 <tr>
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	
@@ -97,8 +94,17 @@
 	</td>
 	
 	<td>
+		<c:choose>
+			<c:when test="${i.house_type eq '422' }">四室二卫二厅</c:when>
+			<c:when test="${i.house_type eq '421' }">四室二卫一厅</c:when>
+			<c:when test="${i.house_type eq '322' }">三室二卫二厅</c:when>
+			<c:when test="${i.house_type eq '321' }">三室二卫一厅</c:when>
+			<c:when test="${i.house_type eq '121' }">一室二卫一厅</c:when>
+			<c:when test="${i.house_type eq '111' }">一室一卫一厅</c:when>
+			<c:when test="${i.house_type eq '221' }">二室二卫一厅</c:when>
+			<c:when test="${i.house_type eq '211' }">二室一卫一厅</c:when>
 		
-		<c:out value="${i.house_type}"></c:out>
+		</c:choose>
 	</td>
 	
 	<td>
@@ -108,7 +114,7 @@
 	
 	<td>
 		
-		<c:out value="${i.tb_house_id}"></c:out>
+		<c:out value="${i.house_name}"></c:out>
 	</td>
 	
 	<td><button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button></td>

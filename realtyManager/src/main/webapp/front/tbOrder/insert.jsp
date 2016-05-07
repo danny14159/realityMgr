@@ -1,5 +1,3 @@
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -52,13 +50,16 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputclient_id" class="col-sm-4 control-label">
-    	客户id
+    	客户
     </label>
     <div class="col-sm-6">
     
+       <select name="client_id" class="form-control required">
+   			<c:forEach items="${customer }" var="i">
+   				<option value="${i.id }">${i.name }</option>
+   			</c:forEach>
+   		</select>
    
-      <input type="text" class="form-control required" id="inputclient_id" placeholder="客户id" name="client_id">
-    
     </div>
   </div>
   </div>
@@ -150,12 +151,16 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputhouse_id" class="col-sm-4 control-label">
-    	房屋id
+    	房屋编号
     </label>
     <div class="col-sm-6">
     
    
-      <input type="text" class="form-control required" id="inputhouse_id" placeholder="房屋id" name="house_id">
+    <select name="house_id" class="form-control required">
+   			<c:forEach items="${houses }" var="i">
+   				<option value="${i.id }">${i.id }</option>
+   			</c:forEach>
+   		</select>
     
     </div>
   </div>

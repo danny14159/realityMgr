@@ -1,5 +1,3 @@
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -80,12 +78,15 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputhouse_type_id" class="col-sm-4 control-label">
-    	房型id
+    	房型编号
     </label>
     <div class="col-sm-6">
     
-   
-      <input type="text" class="form-control required" id="inputhouse_type_id" placeholder="房型id，外键" name="house_type_id">
+   <select name="house_type_id" class="form-control required">
+   			<c:forEach items="${house_type }" var="i">
+   				<option value="${i.id }">${i.id }</option>
+   			</c:forEach>
+   		</select>
     
     </div>
   </div>

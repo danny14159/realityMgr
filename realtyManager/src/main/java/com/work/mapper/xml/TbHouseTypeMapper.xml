@@ -53,7 +53,8 @@
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbHouseType" parameterType="com.work.bean.TbHouseType">
-   select id,drawing_room,balcony,store_room,loft,bedroom,restroom,garden,kitchen,house_type,remark,tb_house_id from tb_house_type
+   select tb_house_type.id,drawing_room,balcony,store_room,loft,bedroom,restroom,garden,kitchen,house_type,tb_house_type.remark,tb_house_id,tb.name as house_name from tb_house_type
+   left join tb_building tb on tb.id=tb_house_type.tb_house_id
    <where>
          <if test="id!=null">and id=#{ id }</if>
          <if test="drawing_room!=null">and drawing_room=#{ drawing_room }</if>

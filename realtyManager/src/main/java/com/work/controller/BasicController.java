@@ -1,6 +1,7 @@
 package com.work.controller;
 
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,7 +24,7 @@ public abstract class BasicController<BeanType> {
 	}
 
 	@RequestMapping(value = "/insert", method = RequestMethod.GET)
-	public String add() {
+	public String add(Model model) {
 
 		return getPrefix() + "insert";
 	}
@@ -40,5 +41,16 @@ public abstract class BasicController<BeanType> {
 	public Object delete(String id) {
 
 		return new AjaxReturn(getDao().delete(M.make("id", id).asMap()) > 0);
+	}
+	
+	/**详情页
+	 * @param id
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/detail/{id}")
+	public String detail(@PathVariable String id,Model model){
+		
+		return getPrefix() + "detail";
 	}
 }

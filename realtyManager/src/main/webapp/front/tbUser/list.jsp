@@ -16,8 +16,8 @@
 
 <h1 class="page-header">用户 - 查看</h1>
 
-<a href="user/insert" class="btn btn-default">添加</a>
-<table class="table table-striped">
+<a href="user/insert" class="btn btn-default btn-xs">添加</a>
+<table class="table table-striped table-bordered">
 <tr>
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	

@@ -16,7 +16,7 @@
 
 <h1 class="page-header">楼盘 - 查看</h1>
 
-<a href="building/insert" class="btn btn-default">添加</a><table class="table table-striped">
+<a href="building/insert" class="btn btn-default btn-xs">添加</a><table class="table table-striped table-bordered">
 <tr>
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	
@@ -111,17 +111,17 @@
 	</td>
 	
 	<td>
-		<fmt:formatDate value="${i.open_date}" pattern="yyyy-MM-dd HH:mm:ss"/>
+		<fmt:formatDate value="${i.open_date}" pattern="yyyy-MM-dd"/>
 		
 	</td>
 	
 	<td>
-		<fmt:formatDate value="${i.sale_date}" pattern="yyyy-MM-dd HH:mm:ss"/>
+		<fmt:formatDate value="${i.sale_date}" pattern="yyyy-MM-dd"/>
 		
 	</td>
 	
 	<td>
-		<fmt:formatDate value="${i.finish_date}" pattern="yyyy-MM-dd HH:mm:ss"/>
+		<fmt:formatDate value="${i.finish_date}" pattern="yyyy-MM-dd"/>
 		
 	</td>
 	
