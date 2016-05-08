@@ -117,7 +117,10 @@
 		<c:out value="${i.house_name}"></c:out>
 	</td>
 	
-	<td><button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button></td>
+		<td>
+	<a class="btn btn-xs btn-link" href="/housetype/detail/${i.id }">查看详情</a>	
+	<button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button>
+	</td>
 </tr>
 </c:forEach>
 </table>

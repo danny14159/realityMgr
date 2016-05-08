@@ -51,6 +51,7 @@ public abstract class BasicController<BeanType> {
 	@RequestMapping("/detail/{id}")
 	public String detail(@PathVariable String id,Model model){
 		
+		model.addAttribute("data", getDao().load(M.make("id", id).asMap()));
 		return getPrefix() + "detail";
 	}
 }

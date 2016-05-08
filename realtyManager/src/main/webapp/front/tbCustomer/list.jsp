@@ -69,7 +69,10 @@
 		<c:out value="${i.occupation}"></c:out>
 	</td>
 	
-	<td><button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button></td>
+	<td>
+	<a class="btn btn-xs btn-link" href="/customer/detail/${i.id }">查看详情</a>	
+	<button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button>
+	</td>
 </tr>
 </c:forEach>
 </table>
