@@ -28,6 +28,18 @@ public abstract class BasicController<BeanType> {
 
 		return getPrefix() + "insert";
 	}
+	
+	@RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
+	public String update(@PathVariable String id,Model model) {
+		model.addAttribute("data", getDao().load(M.make("id", id).asMap()));
+		return getPrefix() + "update";
+	}
+	
+	@RequestMapping(value = "/update", method = RequestMethod.POST)
+	@ResponseBody
+	public Object update(BeanType obj) {
+		return getDao().update(obj);
+	}
 
 	@RequestMapping(value = "/insert", method = RequestMethod.POST)
 	@ResponseBody

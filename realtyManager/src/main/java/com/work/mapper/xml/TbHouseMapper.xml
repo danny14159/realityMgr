@@ -41,18 +41,6 @@
        </set>
    <where>
     id=#{id}
-         <if test="location!=null">and location=#{ location }</if>
-         <if test="building_no!=null">and building_no=#{ building_no }</if>
-         <if test="unit_no!=null">and unit_no=#{ unit_no }</if>
-         <if test="house_no!=null">and house_no=#{ house_no }</if>
-         <if test="house_type_id!=null">and house_type_id=#{ house_type_id }</if>
-         <if test="height!=null">and height=#{ height }</if>
-         <if test="area!=null">and area=#{ area }</if>
-         <if test="inner_area!=null">and inner_area=#{ inner_area }</if>
-         <if test="single_price!=null">and single_price=#{ single_price }</if>
-         <if test="delivery_time!=null">and delivery_time=#{ delivery_time }</if>
-         <if test="decorate_detail!=null">and decorate_detail=#{ decorate_detail }</if>
-         <if test="remark!=null">and remark=#{ remark }</if>
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbHouse" parameterType="com.work.bean.TbHouse">

@@ -29,12 +29,6 @@
        </set>
    <where>
     id=#{id}
-         <if test="date!=null">and date=#{ date }</if>
-         <if test="method!=null">and method=#{ method }</if>
-         <if test="amount!=null">and amount=#{ amount }</if>
-         <if test="client_id!=null">and client_id=#{ client_id }</if>
-         <if test="payee!=null">and payee=#{ payee }</if>
-         <if test="manager!=null">and manager=#{ manager }</if>
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbReceipt" parameterType="com.work.bean.TbReceipt">

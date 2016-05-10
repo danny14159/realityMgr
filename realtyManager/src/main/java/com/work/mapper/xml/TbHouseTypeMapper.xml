@@ -39,17 +39,6 @@
        </set>
    <where>
     id=#{id}
-         <if test="drawing_room!=null">and drawing_room=#{ drawing_room }</if>
-         <if test="balcony!=null">and balcony=#{ balcony }</if>
-         <if test="store_room!=null">and store_room=#{ store_room }</if>
-         <if test="loft!=null">and loft=#{ loft }</if>
-         <if test="bedroom!=null">and bedroom=#{ bedroom }</if>
-         <if test="restroom!=null">and restroom=#{ restroom }</if>
-         <if test="garden!=null">and garden=#{ garden }</if>
-         <if test="kitchen!=null">and kitchen=#{ kitchen }</if>
-         <if test="house_type!=null">and house_type=#{ house_type }</if>
-         <if test="remark!=null">and remark=#{ remark }</if>
-         <if test="tb_house_id!=null">and tb_house_id=#{ tb_house_id }</if>
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbHouseType" parameterType="com.work.bean.TbHouseType">

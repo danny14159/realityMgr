@@ -25,10 +25,6 @@
        </set>
    <where>
     id=#{id}
-         <if test="book_time!=null">and book_time=#{ book_time }</if>
-         <if test="client_id!=null">and client_id=#{ client_id }</if>
-         <if test="house_id!=null">and house_id=#{ house_id }</if>
-         <if test="payed_money!=null">and payed_money=#{ payed_money }</if>
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbSchedule" parameterType="com.work.bean.TbSchedule">

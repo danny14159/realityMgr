@@ -162,6 +162,7 @@
 	
 	<td>
 	<a class="btn btn-xs btn-link" href="/building/detail/${i.id }">查看详情</a>	
+	<a class="btn btn-xs btn-link" href="/building/update/${i.id }">修改</a>	
 	<button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button>
 	</td>
 </tr>

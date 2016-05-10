@@ -23,9 +23,6 @@
        </set>
    <where>
     id=#{id}
-         <if test="degin_time!=null">and degin_time=#{ degin_time }</if>
-         <if test="end_time!=null">and end_time=#{ end_time }</if>
-         <if test="discount!=null">and discount=#{ discount }</if>
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbDiscount" parameterType="com.work.bean.TbDiscount">

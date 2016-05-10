@@ -27,11 +27,6 @@
        </set>
    <where>
     id=#{id}
-         <if test="name!=null">and name=#{ name }</if>
-         <if test="phone!=null">and phone=#{ phone }</if>
-         <if test="sex!=null">and sex=#{ sex }</if>
-         <if test="address!=null">and address=#{ address }</if>
-         <if test="occupation!=null">and occupation=#{ occupation }</if>
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbCustomer" parameterType="com.work.bean.TbCustomer">

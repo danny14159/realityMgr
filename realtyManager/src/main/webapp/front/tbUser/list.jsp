@@ -56,7 +56,9 @@
 		<c:out value="${i.password}"></c:out>
 	</td>
 	
-	<td><button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button></td>
+	<td><button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button>
+	<a class="btn btn-xs btn-link" href="/user/update/${i.id }">修改</a>
+	</td>
 </tr>
 </c:forEach>
 </table>

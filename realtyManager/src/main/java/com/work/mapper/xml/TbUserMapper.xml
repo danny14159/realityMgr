@@ -23,9 +23,6 @@
        </set>
    <where>
     id=#{id}
-         <if test="name!=null">and name=#{ name }</if>
-         <if test="username!=null">and username=#{ username }</if>
-         <if test="password!=null">and password=#{ password }</if>
        </where>
   </update>
   <select id="list" resultType="com.work.bean.TbUser" parameterType="com.work.bean.TbUser">
