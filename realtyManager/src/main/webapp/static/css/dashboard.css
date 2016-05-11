@@ -44,8 +44,8 @@ body {
     padding: 20px;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f5f5f5;
-    border-right: 1px solid #eee;
+    background-color: #f5f5f5;	
+    border-right: 1px solid #ccc;
   }
 }
 
@@ -104,3 +104,29 @@ body {
   border-radius: 50%;
 }
 body{font-family: 'Microsoft Yahei'}
+
+#footer{
+	position: fixed;
+	left:0;
+	bottom: 0;
+	color:#868686;
+	background-color: #eff4fa;
+	border-top:1px solid rgb(41,154,224);
+	clear:both;
+	height:34px;
+	width:100%;
+	
+	line-height: 34px;
+	text-align: center;
+	font-size: 12px;
+}
+#footer .footer_link li{
+	display: inline;
+}
+#footer .footer_link a{
+	padding: 0 4px;
+	color: #1d5494;
+	text-decoration: none;
+}
+.text-info:hover{color:#3498db!important;}
+.text-danger:hover{color:#e74c3c!important;}

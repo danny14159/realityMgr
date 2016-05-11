@@ -43,13 +43,13 @@
             <li><a href="/schedule" target="main"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;预定管理</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="/building" target="main"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;楼盘管理</a></li>
-            <li><a href="/housetype" target="main"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp;房型管理</a></li>
-            <li><a href="/house" target="main"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;房屋管理</a></li>
+            <li><a href="/building" target="main" class="text-info"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>&nbsp;楼盘管理</a></li>
+            <li><a href="/housetype" target="main" class="text-info"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span>&nbsp;房型管理</a></li>
+            <li><a href="/house" target="main" class="text-info"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;房屋管理</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="/order" target="main"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;订单管理</a></li>
-            <li><a href="/receipt" target="main"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;收据管理</a></li>
+            <li><a href="/order" target="main" class="text-danger"><span class="glyphicon glyphicon-file" aria-hidden="true"></span>&nbsp;订单管理</a></li>
+            <li><a href="/receipt" target="main" class="text-danger"><span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>&nbsp;收据管理</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -57,6 +57,16 @@
         </div>
       </div>
     </div>
+
+<div id="footer">
+		<ul class="footer_link">
+			<li><a href="#">关于我们</a>|</li>
+			<li><a href="#">联系我们</a>|</li>
+			<li><a href="#">帮助中心</a>|</li>
+			<li style="color: #868686;">All
+				Rights Reserved</li>
+		</ul>
+	</div>上
 
 <script type="text/javascript" src="/static/js/jquery.min.js"></script>
 <script type="text/javascript">

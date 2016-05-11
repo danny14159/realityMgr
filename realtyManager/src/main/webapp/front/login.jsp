@@ -10,7 +10,7 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   /* background-color: #eee; */
-  background: url('/static/img/bg.jpg')  no-repeat;
+  background: url('/static/bg.jpg')  no-repeat;
   background-size:100%; 
 }
 
@@ -57,7 +57,7 @@ body{}
 <div class="container">
 
       <form class="form-signin" action="/app/login" method="post">
-        <h2 class="form-signin-heading">欢迎</h2>${msg }
+        <h2 class="form-signin-heading">欢迎登录房地产管理系统</h2>${msg }
         <label for="inputEmail" class="sr-only">用户名</label>
         <input type="text" name="username" class="form-control" placeholder="用户名" required autofocus>
         <label for="inputPassword" class="sr-only">密码</label>
