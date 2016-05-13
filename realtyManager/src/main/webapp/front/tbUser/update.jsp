@@ -62,7 +62,7 @@
   </div>
   </div>
  
-<div class="col-sm-6">
+<%-- <div class="col-sm-6">
   <div class="form-group">
     <label for="inputpassword" class="col-sm-4 control-label">
     	密码	
@@ -74,7 +74,7 @@
     
     </div>
   </div>
-  </div>
+  </div> --%>
  
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
