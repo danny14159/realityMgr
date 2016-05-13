@@ -153,7 +153,7 @@
     <div class="col-sm-6">
     
    
-    	<c:out value="${data.house_id }"></c:out>
+    	<a href="/house/detail/<c:out value="${data.house_id}"></c:out>"><c:out value="${data.house_id}"></c:out></a>
     
     </div>
   </div>

@@ -13,7 +13,28 @@
 
 <h1 class="page-header">房型 - 查看</h1>
 
-<a href="housetype/insert" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;添加</a><table class="table table-striped table-bordered">
+<a href="housetype/insert" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;添加</a>
+
+<form class="form-inline" action="" method="post">
+  <div class="form-group">
+    <label>套型：</label>
+    <select class="form-control input-sm" name="house_type" >
+   			<option value=""></option>
+   			<option value="422">四室二卫二厅</option>
+   			<option value="421">四室二卫一厅</option>
+   			<option value="322">三室二卫二厅</option>
+   			<option value="321">三室二卫一厅</option>
+   			<option value="121">一室二卫一厅</option>
+   			<option value="111">一室一卫一厅</option>
+   			<option value="221">二室二卫一厅</option>
+   			<option value="211">二室一卫一厅</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-default btn-xs">搜索</button>
+  <a href="" class="btn btn-default btn-xs">查看全部</a>
+</form>
+
+<table class="table table-striped table-bordered">
 <tr>
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	

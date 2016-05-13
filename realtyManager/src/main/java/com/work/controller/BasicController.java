@@ -19,6 +19,7 @@ public abstract class BasicController<BeanType> {
 	@RequestMapping(value = "")
 	public String query(BeanType obj, Model model) {
 
+		model.addAttribute("obj", obj);
 		model.addAttribute("data", getDao().list(obj));
 		return getPrefix() + "list";
 	}

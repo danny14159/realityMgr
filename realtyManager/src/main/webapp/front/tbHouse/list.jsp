@@ -79,8 +79,8 @@
 	</td>
 	
 	<td>
+		<a href="/housetype/detail/<c:out value="${i.house_type_id}"></c:out>"><c:out value="${i.house_type_id}"></c:out></a>
 		
-		<c:out value="${i.house_type_id}"></c:out>
 	</td>
 	
 	<td>

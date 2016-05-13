@@ -113,8 +113,8 @@
 	</td>
 	
 	<td>
+		<a href="/house/detail/<c:out value="${i.house_id}"></c:out>"><c:out value="${i.house_id}"></c:out></a>
 		
-		<c:out value="${i.house_id}"></c:out>
 	</td>
 	
 	<td>

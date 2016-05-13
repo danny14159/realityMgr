@@ -91,13 +91,12 @@
 <div class="col-sm-6">
   <div class="form-group">
     <label for="inputhouse_type_id" class="col-sm-4 control-label">
-    	房型id，外键
+    	房型id
     </label>
     <div class="col-sm-6">
     
    
-    	<c:out value="${data.house_type_id }"></c:out>
-    
+    <a href="/housetype/detail/<c:out value="${data.house_type_id}"></c:out>"><c:out value="${data.house_type_id}"></c:out></a>
     </div>
   </div>
   </div>

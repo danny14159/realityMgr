@@ -16,7 +16,18 @@
 
 <h1 class="page-header">楼盘 - 查看</h1>
 
-<a href="building/insert" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;添加</a><table class="table table-striped table-bordered">
+<a href="building/insert" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;添加</a>
+
+<form class="form-inline" action="" method="post">
+  <div class="form-group">
+    <label>楼盘名：</label>
+    <input type="text" class="form-control input-sm" placeholder="搜索楼盘" name="name" value="${obj.name }">
+  </div>
+  <button type="submit" class="btn btn-default btn-xs">搜索</button>
+  <a href="" class="btn btn-default btn-xs">查看全部</a>
+</form>
+
+<table class="table table-striped table-bordered">
 <tr>
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	

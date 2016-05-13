@@ -173,8 +173,13 @@
     </label>
     <div class="col-sm-6">
     
-   
-      <input type="text" class="form-control required" id="inputpay_method" placeholder="付款方式" name="pay_method">
+   	<select name="pay_method" class="form-control required">
+   		<option>信用卡</option>
+   		<option>银行卡</option>
+   		<option>支付宝</option>
+   		<option>现金</option>
+   		<option>其他</option>
+   	</select>
     
     </div>
   </div>

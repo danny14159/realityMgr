@@ -17,6 +17,15 @@
 <h1 class="page-header">用户 - 查看</h1>
 
 <a href="user/insert" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>&nbsp;添加</a>
+<form class="form-inline" action="" method="post">
+  <div class="form-group">
+    <label>姓名：</label>
+    <input type="text" class="form-control input-sm" placeholder="搜索姓名" name="name" value="${obj.name }">
+  </div>
+  <button type="submit" class="btn btn-default btn-xs">搜索</button>
+  <a href="" class="btn btn-default btn-xs">查看全部</a>
+</form>
+
 <table class="table table-striped table-bordered">
 <tr>
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
@@ -27,8 +36,6 @@
 	<th>姓名</th>
 	
 	<th>登录名</th>
-	
-	<th>密码</th>
 	
 	<th>操作</th>
 </tr>
@@ -49,11 +56,6 @@
 	<td>
 		
 		<c:out value="${i.username}"></c:out>
-	</td>
-	
-	<td>
-		
-		<c:out value="${i.password}"></c:out>
 	</td>
 	
 	<td><button class="btn btn-xs btn-link" onclick="del(${i.id})">删除</button>
