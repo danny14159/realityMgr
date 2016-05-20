@@ -39,7 +39,6 @@
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	
 	
-	<th>id</th>
 	
 	<th>客厅</th>
 	
@@ -69,10 +68,6 @@
 <tr>
 <td><input type="checkbox" checked="checked" name="selectRow"/></td>
 	
-	<td>
-		
-		<c:out value="${i.id}"></c:out>
-	</td>
 	
 	<td>
 		

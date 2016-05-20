@@ -21,8 +21,6 @@
 	<th><input type="checkbox" onchange="toggleSelectAll(this,$('[name=selectRow]'));"/></th>
 	
 	
-	<th>id</th>
-	
 	<th>开始时间</th>
 	
 	<th>结束时间</th>
@@ -35,10 +33,6 @@
 <tr>
 <td><input type="checkbox" checked="checked" name="selectRow"/></td>
 	
-	<td>
-		
-		<c:out value="${i.id}"></c:out>
-	</td>
 	
 	<td>
 		<fmt:formatDate value="${i.degin_time}" pattern="yyyy-MM-dd HH:mm:ss"/>
