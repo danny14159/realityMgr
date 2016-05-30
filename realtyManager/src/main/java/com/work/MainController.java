@@ -55,7 +55,7 @@ public class MainController extends SpringBootServletInitializer{
 		return (TbUser)WebUtils.getSessionAttribute(req, ME);
 	}
 	
-	/**login request
+	/**登录请求
 	 * @param username
 	 * @param password
 	 * @return
@@ -75,12 +75,19 @@ public class MainController extends SpringBootServletInitializer{
 		 return "redirect:/app/frame";
 	}
 	
+	/**后台框架页面
+	 * @return
+	 */
 	@RequestMapping("/app/frame")
 	public String frame(){
 		
 		return "frame";
 	}
 	
+	/**SpringBoot入口函数
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(MainController.class, args);
 	}

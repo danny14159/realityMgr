@@ -1,5 +1,5 @@
 package com.work.bean;
-/**
+/**用户
  * @author 
  *
  */

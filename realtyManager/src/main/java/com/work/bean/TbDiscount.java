@@ -1,5 +1,5 @@
 package com.work.bean;
-/**
+/**折扣
  * @author 
  *
  */

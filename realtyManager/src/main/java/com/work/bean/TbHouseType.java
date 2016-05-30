@@ -1,5 +1,5 @@
 package com.work.bean;
-/**
+/**房型
  * @author 
  *
  */
