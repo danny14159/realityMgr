@@ -2,7 +2,8 @@
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="com.work.mapper.TbBuildingDao">
   <insert id="insert" parameterType="com.work.bean.TbBuilding">
-   insert into tb_building(id,region,name,address,code,building_area,total_area,green_rate,residences,open_date,sale_date,finish_date,license_account,qualification_license,legal_person,legal_person_phone,legal_person_postcode,intro,remark) values(#{id},#{region},#{name},#{address},#{code},#{building_area},#{total_area},#{green_rate},#{residences},#{open_date},#{sale_date},#{finish_date},#{license_account},#{qualification_license},#{legal_person},#{legal_person_phone},#{legal_person_postcode},#{intro},#{remark});
+   insert into tb_building(region,name,address,code,building_area,total_area,green_rate,residences,open_date,sale_date,finish_date,license_account,qualification_license,legal_person,legal_person_phone,legal_person_postcode,intro,remark)
+    values(#{region},#{name},#{address},#{code},#{building_area},#{total_area},#{green_rate},#{residences},#{open_date},#{sale_date},#{finish_date},#{license_account},#{qualification_license},#{legal_person},#{legal_person_phone},#{legal_person_postcode},#{intro},#{remark});
   </insert>
   <delete id="delete" parameterType="com.work.bean.TbBuilding">
    delete from tb_building
@@ -127,7 +128,6 @@
          <if test="intro!=null">and intro=#{ intro }</if>
          <if test="remark!=null">and remark=#{ remark }</if>
        </where>
-   limit 0,1
   </select>
   <select id="count" resultType="int" parameterType="com.work.bean.TbBuilding">
    select count(1) from tb_building

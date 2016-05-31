@@ -2,7 +2,7 @@
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="com.work.mapper.TbReceiptDao">
   <insert id="insert" parameterType="com.work.bean.TbReceipt">
-   insert into tb_receipt(id,date,method,amount,client_id,payee,manager) values(#{id},#{date},#{method},#{amount},#{client_id},#{payee},#{manager});
+   insert into tb_receipt(date,method,amount,client_id,payee,manager) values(#{date},#{method},#{amount},#{client_id},#{payee},#{manager});
   </insert>
   <delete id="delete" parameterType="com.work.bean.TbReceipt">
    delete from tb_receipt
@@ -67,7 +67,6 @@
          <if test="payee!=null">and payee=#{ payee }</if>
          <if test="manager!=null">and manager=#{ manager }</if>
        </where>
-   limit 0,1
   </select>
   <select id="count" resultType="int" parameterType="com.work.bean.TbReceipt">
    select count(1) from tb_receipt

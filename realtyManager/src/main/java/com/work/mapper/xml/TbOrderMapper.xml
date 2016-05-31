@@ -2,7 +2,8 @@
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="com.work.mapper.TbOrderDao">
   <insert id="insert" parameterType="com.work.bean.TbOrder">
-   insert into tb_order(id,sign_time,client_id,client_name,client_phone,client_certifacate_type,client_certifacate,client_address,client_remark,house_id,pay_method,initial_payment,house_price,loan_amount,loan_year,loan_bank,cpf_amount,cpf_year,cpf_bank,remark) values(#{id},#{sign_time},#{client_id},#{client_name},#{client_phone},#{client_certifacate_type},#{client_certifacate},#{client_address},#{client_remark},#{house_id},#{pay_method},#{initial_payment},#{house_price},#{loan_amount},#{loan_year},#{loan_bank},#{cpf_amount},#{cpf_year},#{cpf_bank},#{remark});
+   insert into tb_order(sign_time,client_id,client_name,client_phone,client_certifacate_type,client_certifacate,client_address,client_remark,house_id,pay_method,initial_payment,house_price,loan_amount,loan_year,loan_bank,cpf_amount,cpf_year,cpf_bank,remark) 
+   values(#{sign_time},#{client_id},#{client_name},#{client_phone},#{client_certifacate_type},#{client_certifacate},#{client_address},#{client_remark},#{house_id},#{pay_method},#{initial_payment},#{house_price},#{loan_amount},#{loan_year},#{loan_bank},#{cpf_amount},#{cpf_year},#{cpf_bank},#{remark});
   </insert>
   <delete id="delete" parameterType="com.work.bean.TbOrder">
    delete from tb_order
@@ -132,7 +133,6 @@
          <if test="cpf_bank!=null">and cpf_bank=#{ cpf_bank }</if>
          <if test="remark!=null">and remark=#{ remark }</if>
        </where>
-   limit 0,1
   </select>
   <select id="count" resultType="int" parameterType="com.work.bean.TbOrder">
    select count(1) from tb_order

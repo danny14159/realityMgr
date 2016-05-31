@@ -2,7 +2,7 @@
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="com.work.mapper.TbCustomerDao">
   <insert id="insert" parameterType="com.work.bean.TbCustomer">
-   insert into tb_customer(id,name,phone,sex,address,occupation) values(#{id},#{name},#{phone},#{sex},#{address},#{occupation});
+   insert into tb_customer(name,phone,sex,address,occupation) values(#{name},#{phone},#{sex},#{address},#{occupation});
   </insert>
   <delete id="delete" parameterType="com.work.bean.TbCustomer">
    delete from tb_customer
@@ -62,7 +62,6 @@
          <if test="address!=null">and address=#{ address }</if>
          <if test="occupation!=null">and occupation=#{ occupation }</if>
        </where>
-   limit 0,1
   </select>
   <select id="count" resultType="int" parameterType="com.work.bean.TbCustomer">
    select count(1) from tb_customer

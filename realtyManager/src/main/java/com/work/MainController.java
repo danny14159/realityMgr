@@ -90,6 +90,7 @@ public class MainController extends SpringBootServletInitializer{
 	 */
 	public static void main(String[] args) throws Exception {
 		SpringApplication.run(MainController.class, args);
+		//Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 	}
 
 }

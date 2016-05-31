@@ -2,7 +2,8 @@
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  <mapper namespace="com.work.mapper.TbHouseDao">
   <insert id="insert" parameterType="com.work.bean.TbHouse">
-   insert into tb_house(id,location,building_no,unit_no,house_no,house_type_id,height,area,inner_area,single_price,delivery_time,decorate_detail,remark) values(#{id},#{location},#{building_no},#{unit_no},#{house_no},#{house_type_id},#{height},#{area},#{inner_area},#{single_price},#{delivery_time},#{decorate_detail},#{remark});
+   insert into tb_house(location,building_no,unit_no,house_no,house_type_id,height,area,inner_area,single_price,delivery_time,decorate_detail,remark) 
+   values(#{location},#{building_no},#{unit_no},#{house_no},#{house_type_id},#{height},#{area},#{inner_area},#{single_price},#{delivery_time},#{decorate_detail},#{remark});
   </insert>
   <delete id="delete" parameterType="com.work.bean.TbHouse">
    delete from tb_house
@@ -97,7 +98,6 @@
          <if test="decorate_detail!=null">and decorate_detail=#{ decorate_detail }</if>
          <if test="remark!=null">and remark=#{ remark }</if>
        </where>
-   limit 0,1
   </select>
   <select id="count" resultType="int" parameterType="com.work.bean.TbHouse">
    select count(1) from tb_house
